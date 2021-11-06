@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>School Management - Dashboard</title>
+    <link rel="icon" href="./resource/img/Logo.png" type="image/x-icon" />
+    <!-- Bootstrap core CSS-->
+    <link
+      href="resource/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="resource/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Page level plugin CSS-->
+    <link
+      href="resource/vendor/datatables/dataTables.bootstrap4.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+
+    <link href="resource/css/custom.css" rel="stylesheet" />
+    <link href="resource/css/main.css" rel="stylesheet" />
+    <link href="resource/css/cal.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <nav
+      class="navbar navbar-admin navbar-expand navbar-dark bg-dark static-top"
+    >
+      <a class="navbar-brand mr-1" href="index.html">School-MS</a>
+
+      <button
+        style="margin-left 5% !important "
+        class="btn btn-link btn-sm text-white order-1 order-sm-0"
+        id="sidebarToggle"
+        href="#"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navbar Search -->
+      <form
+        class="
+          d-none d-md-inline-block
+          form-inline
+          ml-auto
+          mr-0 mr-md-3
+          my-2 my-md-0
+        "
+      >
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for..."
+            aria-label="Search"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow mx-1">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="alertsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="badge badge-danger">9+</span>
+            <i class="fas fa-bell fa-fw"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="alertsDropdown"
+          >
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown no-arrow mx-1">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="messagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="badge badge-danger">7</span>
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="messagesDropdown"
+          >
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="userDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+              style="width: 30px; height: 30px"
+              src="resource/img/user3.png"
+              class="rounded-circle"
+              alt="Avatar"
+            />
+            <span>User Name</span>
+            <i class="icon-submenu lnr lnr-chevron-down"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a
+              class="dropdown-item"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+              >Logout</a
+            >
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <!-- Sidebar -->
+      <ul class="sidebar sidebar-admin navbar-nav">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item active" href="index.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Admin</a
+            >
+            <a class="dropdown-item" href="student.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Student</a
+            >
+            <a class="dropdown-item" href="teacher.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Teacher</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-user-graduate"></i>
+            <span>Students</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="allStudents.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>All Students</a
+            >
+            <a class="dropdown-item" href="studentDetails.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Student Details</a
+            >
+            <a class="dropdown-item" href="admitForm.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Admit Form</a
+            >
+            <a class="dropdown-item" href="studentPromotion.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Student
+              Promotion</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-users"></i>
+            <span>Teacher</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item active" href="allTeachers.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>All Teachers</a
+            >
+            <a class="dropdown-item" href="teacherDetails.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Teacher Details</a
+            >
+            <a class="dropdown-item" href="addTeacher.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Add Teacher</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Teachers.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Teachers</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-book"></i>
+            <span>Library</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="allBooks.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>All Books</a
+            >
+            <a class="dropdown-item" href="addBook.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Add New Book</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-briefcase"></i>
+            <span>Account</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="feesCollection.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Fees Collections</a
+            >
+            <a class="dropdown-item" href="createStudentPayment.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Create Student
+              Payment</a
+            >
+            <a class="dropdown-item" href="allEXpenses.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>All Expenses</a
+            >
+            <a class="dropdown-item" href="addEXpenses.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Add Expenses</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-table"></i>
+            <span>Class</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="allClasses.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>All Classes</a
+            >
+            <a class="dropdown-item" href="addNewClass.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Add New Class</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="subject.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Subject</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="classRoutine.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Class Routine</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="attendance.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Attendance</span></a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-graduation-cap"></i>
+            <span>Exam</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="examSchedule.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Exam Schedule</a
+            >
+            <a class="dropdown-item" href="examGrades.html"
+              ><i class="fas fa-angle-right">&nbsp;&nbsp;</i>Exam Grades</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="transport.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Transport</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="hostel.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Hostel</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="notice.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Notice</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="message.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Message</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="uiElements.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>UI Elements</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="maps.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Maps</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="account.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Account</span></a
+          >
+        </li>
+      </ul>
+
+      <!-- /.content-wrapper -->
+
+      <div id="content-wrapper">
+        <div class="container-fluid">
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Admin</li>
+          </ol>
+
+          <!-- amount cards -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="info_amount1">
+                    <div class="info_icon text-center">
+                      <i class="fas fa-users"></i>
+
+                      <p>Students</p>
+
+                      <h2 class="info_numb text-center">5</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="info_amount2">
+                    <div class="info_icon text-center">
+                      <i class="fas fa-user-friends"></i>
+
+                      <p>Teachers</p>
+
+                      <h2 class="info_numb text-center">5</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="info_amount3">
+                    <div class="info_icon text-center">
+                      <i class="fas fa-user-plus"></i>
+
+                      <p>Teachers</p>
+
+                      <h2 class="info_numb text-center">5</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="info_amount4">
+                    <div class="info_icon text-center">
+                      <i class="fas fa-money-bill-alt"></i>
+
+                      <p>Total Earnings</p>
+
+                      <h2 class="info_numb text-center">5</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <canvas id="myChart">
+                <div class="col-md-5">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </canvas>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="panel-info1">
+                    <div class="container">
+                      <div class="row">
+                        <div class="social_icons col-xs-6 col-md-6 col-lg-6">
+                          <img
+                            class="card-logo"
+                            src="resource/img/facebook-white-logo.png"
+                            alt="facebook"
+                          />
+
+                          <p>Follow us on facebook</p>
+                        </div>
+
+                        <h2
+                          class="
+                            social_numb
+                            col-xs-6 col-md-6 col-lg-6
+                            text-center
+                          "
+                        >
+                          5
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="panel-info2">
+                    <div class="container">
+                      <div class="row">
+                        <div class="social_icons col-xs-6 col-md-6 col-lg-6">
+                          <img
+                            class="card-logo"
+                            src="resource/img/google-plus-logo-white.png"
+                            alt="google-plus"
+                          />
+
+                          <p>Follow us on google plus</p>
+                        </div>
+
+                        <h2
+                          class="
+                            social_numb
+                            col-xs-6 col-md-6 col-lg-6
+                            text-center
+                          "
+                        >
+                          5
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="panel-info3">
+                    <div class="container">
+                      <div class="row">
+                        <div class="social_icons col-xs-6 col-md-6 col-lg-6">
+                          <img
+                            class="card-logo"
+                            src="resource/img/linkedin-white.png"
+                            alt="linkedin"
+                          />
+
+                          <p>Follow us on facebook</p>
+                        </div>
+
+                        <h2
+                          class="
+                            social_numb
+                            col-xs-6 col-md-6 col-lg-6
+                            text-center
+                          "
+                        >
+                          5
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="panel-info4">
+                    <div class="container">
+                      <div class="row">
+                        <div class="social_icons col-xs-6 col-md-6 col-lg-6">
+                          <img
+                            class="card-logo"
+                            src="resource/img/twitter-logo-white.png"
+                            alt="twitter"
+                          />
+
+                          <p>Follow us on twitter</p>
+                        </div>
+
+                        <h2
+                          class="
+                            social_numb
+                            col-xs-6 col-md-6 col-lg-6
+                            text-center
+                          "
+                        >
+                          5
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->
+          </div>
+
+          <div class="row">
+            <div class="calendar col-md-6 col-sm-12 col-xs-12">
+              <div class="page">
+                <!-- Responsive calendar - START -->
+                <div class="responsive-calendar">
+                  <div class="controls">
+                    <a class="pull-left" data-go="prev">
+                      <div class="btn">
+                        <i class="icon-chevron icon-chevron-rotate"></i>
+                      </div>
+                    </a>
+                    <h4>
+                      <span data-head-year></span> <span data-head-month></span>
+                    </h4>
+                    <a class="pull-right" data-go="next">
+                      <div class="btn"><i class="icon-chevron"></i></div>
+                    </a>
+                  </div>
+                  <hr />
+                  <div class="day-headers">
+                    <div class="day header">Mon</div>
+                    <div class="day header">Tue</div>
+                    <div class="day header">Wed</div>
+                    <div class="day header">Thu</div>
+                    <div class="day header">Fri</div>
+                    <div class="day header">Sat</div>
+                    <div class="day header">Sun</div>
+                  </div>
+                  <div class="days" data-group="days">
+                    <!-- the place where days will be generated -->
+                  </div>
+                </div>
+                <!-- Responsive calendar - END -->
+                <!-- Placeholder -->
+                <div class="responsive-calendar-placeholder"></div>
+              </div>
+            </div>
+
+            <div class="noticeBoard col-md-3 col-sm-6 col-xs-12">
+              <div class="notice-header">
+                <h4>Notice Board</h4>
+                <hr />
+              </div>
+
+              <ol class="activity-feed">
+                <li class="feed-item">
+                  <time class="date" datetime="9-25">Sep 25</time>
+                  <span class="text"
+                    >Responded to need
+                    <a href="single-need.php">“Volunteer opportunity”</a></span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-24">Sep 24</time>
+                  <span class="text"
+                    >Added an interest “Volunteer Activities”</span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-23">Sep 23</time>
+                  <span class="text"
+                    >Joined the group
+                    <a href="single-group.php">“Boardsmanship Forum”</a></span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-21">Sep 21</time>
+                  <span class="text"
+                    >Responded to need
+                    <a href="single-need.php">“In-Kind Opportunity”</a></span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-18">Sep 18</time>
+                  <span class="text"
+                    >Created need
+                    <a href="single-need.php">“Volunteer Opportunity”</a></span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-17">Sep 17</time>
+                  <span class="text"
+                    >Attending the event
+                    <a href="single-event.php">“Some New Event”</a></span
+                  >
+                </li>
+                <li class="feed-item">
+                  <time class="date" datetime="9-17">Sep 17</time>
+                  <span class="text"
+                    >Attending the event
+                    <a href="single-event.php">“Some New Event”</a></span
+                  >
+                </li>
+              </ol>
+            </div>
+
+            <div class="recentActivities col-md-3 col-sm-6 col-xs-12">
+              <h4>Recent Activites</h4>
+              <hr />
+              <ul class="timeline">
+                <li>
+                  <a target="_blank" href="#">Lorente</a>&nbsp;&nbsp;<span
+                    class="timeChanged"
+                    >1min ago</span
+                  >
+                  <p>You updated <a href="#">Thomas</a> fees.</p>
+                </li>
+                <li>
+                  <a href="#">Thomas</a>&nbsp;&nbsp;<span class="timeChanged"
+                    >3min ago</span
+                  >
+
+                  <p>You updated <a href="#">Thomas</a> fees.</p>
+                </li>
+                <li>
+                  <a href="#">Emplos</a>&nbsp;&nbsp;<span class="timeChanged"
+                    >5min ago</span
+                  >
+
+                  <p>You updated <a href="#">Thomas</a> fees.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer">
+                <p>&copy; <a href="#">Pencil Studio </a> | 2018</p>
+                <p>
+                  Contact information:
+                  <a href="mailto:someone@example.com">someone@example.com</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="resource/vendor/jquery/jquery.min.js"></script>
+    <script src="resource/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="resource/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="resource/vendor/chart.js/Chart.min.js"></script>
+    <script src="resource/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="resource/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="resource/js/main.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/js/mdb.min.js"
+    ></script>
+
+    <!-- Demo scripts for this page-->
+    <script src="resource/js/demo/datatables-demo.js"></script>
+    <script src="resource/js/demo/chart-area-demo.js"></script>
+    <script src="resource/js/demo/chart-bar-new.js"></script>
+    <script src="resource/js/demo/cal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.navbar-admin {
+  background-color: #b1b1b1 !important;
+}
+
+.navbar-teacher {
+  background-color: #f076fb !important;
+}
+
+.navbar-student {
+  background-color: #75c8f8 !important;
+}
+
+.sidebar-admin {
+  background-color: #424242;
+}
+
+.sidebar-teacher {
+  background-color: #4c0053;
+}
+
+.sidebar-student {
+  background-color: #003858;
+}
+
+.sidebar-admin .nav-item .dropdown-menu {
+  background-color: #424242;
+}
+
+.sidebar-teacher .nav-item .dropdown-menu {
+  background-color: #4c0053;
+}
+
+.sidebar-student .nav-item .dropdown-menu {
+  background-color: #003858;
+}
